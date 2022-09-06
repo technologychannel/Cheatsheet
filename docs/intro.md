@@ -1,47 +1,69 @@
 ---
 sidebar_position: 1
 ---
+# Git & Github Cheatsheet
+Easy git and github cheatsheet.
 
-# Tutorial Intro
-
-Let's discover **Docusaurus in less than 5 minutes**.
-
-## Getting Started
-
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
+### Set Username and Email
+Setup author name and email. It is represented in all work.
+```
+git config --global user.name "yourname"
+git config --global user.email "youremail"
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
+### View Username and Email & Other Config
+```
+git config --list
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+## To Get Help
+```
+git help
+git help <command>
+```
+### Clone
+To download copy of repository
+```
+git clone <url of repository>
+```
+## Status
+To view current status
+```
+git status 
+```
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+### Init Repository
+When you create new project, first you need to initalize it. If you don't initialize other commands doesn't work.
+```
+git init
+```
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+### Add File To Staging Area
+If you use `git add filename`, it will only add specific file to staging area. If you use `git add .`, it will add all the files to staging area.
+```
+git add filename or
+git add . 
+```
+
+### To Commit File
+When you commit, you can save the current status of file to git. It will only works on files which are in staging area.
+```
+git commit -m "Short Message About Work You Have Done"
+```
+
+## Check the Difference
+To check difference between commited and unstaged file.
+```
+git diff
+```
+
+### How to Move File From Local to Remote
+- Create a remote repository.
+- add the origin url to command.
+
+```
+git push origin master
+```
+Here master is branch name.
+
+
